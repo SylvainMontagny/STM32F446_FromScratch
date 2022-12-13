@@ -3,7 +3,7 @@
 
 
 void USART2_Init(void);
-void USART2_Transmit(void);
-void USART2_Receive(void);
+void USART2_TransmitChar(uint8_t data);
+uint8_t USART2_ReceiveChar(void);
 
 #endif
