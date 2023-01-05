@@ -7,13 +7,13 @@
 void USART2_Init(void){
 	/* USART2 Init */
 	RCC->APB1ENR |= RCC_APB1ENR_USART2EN;			// ABP1
+	USART2->CR1 |= USART_CR1_UE;
 	GPIOA->MODER |= ALT_MODE<<4;					// PA2
 	GPIOA->MODER |= ALT_MODE<<6;					// PA3
 	GPIOA->AFR[0] |= 7<<8;							// USART2
 	GPIOA->AFR[0] |= 7<<12;							// USART2
 	USART2->BRR  = 139;								// 115200 - APB1:16Mhz
 	USART2->CR1 |= USART_CR1_TE | USART_CR1_RE;		// RX-TX
-	USART2->CR1 |= USART_CR1_UE;
 }
 
 
