@@ -15,11 +15,11 @@ This project has been written for the STM32F446RE MCU. The main function works o
 5. Add Drivers folder in your project.
 
 For the compilation process:
-1. Add the following folder to your include Path (right click > "Add to include Path"). Otherwise, the compiler won't find the header files. So for the following folders, you need to :
+1. Add the following folder to your include Path (right click > "Add to include Path"), otherwise, the compiler won't find the header files.
 	* Drivers/CMSIS/ST/STM32F4xx/Include
 	* Drivers/CMSIS/Include
 	* Inc
-2. The folder Src/ is by default "exclude from build". We need to include it to the compilation process. Right clic on the folder > C/C++ build > Uncheck the box "Exclude from buid".
+2. The folder Src/ is sometimes "exclude from build". We need to include it to the compilation process. Right clic on the folder > C/C++ build > Uncheck the box "Exclude from buid".
 
 Your project is ready. You can now compile and flash your MCU.
  
