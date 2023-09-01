@@ -1,14 +1,16 @@
-# What is this project?
+# 1. What is this project?
 This project is a simple demonstration to show how to write an application using only registers with CMSIS drivers.
 
-# What is the MCU?
+# 2. What is the MCU?
 This project has been written for the STM32F446RE MCU. The main function works on a STM32F446 nucleo board with the following peripherals.
 
 	* PA5 : LED
 	* PC13 : Push Button
 	* PA2 - PA3 : USART2
+	* Sytick Timer
 
-# How to use it with STM32CubeIDE?
+# 3. Project compilation
+## 3.1. How to use it with STM32CubeIDE?
 1. On STM32CubeIDE, create a new empty project: File > New > STM32 project > MCU Selector > STM32F446RET6 > Empty project.
 2. Delete all files from Inc/ and Src/ folder.
 3. Clone this repository on your Hard Disk.
@@ -24,9 +26,9 @@ For the compilation process:
 
 Your project is ready. You can now compile and flash your MCU.
 
-# How to use it with arm-gcc
+## 3.2. How to use it with arm-gcc
 TODO ...
 
-# How to use it with arm-gcc + Make
+## 3.3 How to use it with arm-gcc + Make
 TODO
  
