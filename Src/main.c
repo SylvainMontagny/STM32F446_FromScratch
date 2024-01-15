@@ -15,9 +15,8 @@ int main(void)
 
 	while(1){
 		//for(uint32_t i = 0 ; i<100000; i++);
-		SYSTICK_Delay(200);
+		SYSTICK_Delay(1000);
 		GPIOA->ODR ^= 1<<5;
 		printf("Hello\r\n");
 	}
 }
-

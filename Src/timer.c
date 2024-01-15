@@ -21,5 +21,6 @@ uint32_t SYSTICK_Get(void){
 	return ticks;
 }
 
-
+// Get MCO HSE to PA8 (D7)
+// the MCO1PRE[2:0] and MCO1[1:0]
 
