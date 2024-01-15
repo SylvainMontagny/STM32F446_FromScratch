@@ -27,7 +27,7 @@ For the compilation process:
 Your project is ready. You can now compile and flash your MCU.
 
 ## 3.2. How to use it with arm-gcc
-TODO ...
+TODO ... TODO
 
 ## 3.3 How to use it with arm-gcc + Make
 TODO
