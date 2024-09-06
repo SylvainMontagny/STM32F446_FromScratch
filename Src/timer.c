@@ -12,9 +12,8 @@ void SYSTICK_Init(void){
 void SYSTICK_Delay(uint32_t Delay)
 {
 	  uint32_t tickstart = SYSTICK_Get();
-	  uint32_t wait = Delay;
 
-	  while((SYSTICK_Get() - tickstart) < wait);
+	  while((SYSTICK_Get() - tickstart) < Delay);
 }
 
 uint32_t SYSTICK_Get(void){
