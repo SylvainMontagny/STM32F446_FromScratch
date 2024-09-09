@@ -17,6 +17,10 @@ int __io_getchar(void){
 }
 
 /* For scanf function */
-void UTIL_Init(void){
+void SCANF_Init(void){
 	setvbuf(stdin, NULL, _IONBF, 0);
+}
+
+void FPU_Init(void){
+	SCB->CPACR |= ((3UL << 20U)|(3UL << 22U));
 }
