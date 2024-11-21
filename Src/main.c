@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	FPU_Init;
+	FPU_Init();
 	GPIO_Init();
 	USART2_Init();
 	SYSTICK_Init();
