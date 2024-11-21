@@ -19,9 +19,9 @@ void SYSTICK_Init(void){
  */
 void SYSTICK_Delay(uint32_t Delay)
 {
-	  uint32_t tickstart = SYSTICK_Get();
+	uint32_t tickstart = SYSTICK_Get();
 
-	  while((SYSTICK_Get() - tickstart) < Delay);
+	while((SYSTICK_Get() - tickstart) < Delay);
 }
 
 uint32_t SYSTICK_Get(void){
@@ -34,10 +34,10 @@ uint32_t SYSTICK_Get(void){
 
 void DWT_Init(void)
 {
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-//    DWT->LAR = 0xC5ACCE55;  // For Cortex M7
-    DWT->CYCCNT = 0;
-    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+	CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+	//    DWT->LAR = 0xC5ACCE55;  // For Cortex M7
+	DWT->CYCCNT = 0;
+	DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
 }
 
 /**
@@ -46,16 +46,16 @@ void DWT_Init(void)
  */
 void DWT_Delay(uint32_t _us)
 {
-    uint32_t startTick  = DWT->CYCCNT;
-    uint32_t targetTick = DWT->CYCCNT + _us * (SystemCoreClock/1000000);
+	uint32_t startTick  = DWT->CYCCNT;
+	uint32_t targetTick = DWT->CYCCNT + _us * (SystemCoreClock/1000000);
 
-    // No overflow
-    if (targetTick > startTick)
-        while (DWT->CYCCNT < targetTick);
+	// No overflow
+	if (targetTick > startTick)
+		while (DWT->CYCCNT < targetTick);
 
-    // With overflow
-    else
-        while (DWT->CYCCNT > startTick || DWT->CYCCNT < targetTick);
+	// With overflow
+	else
+		while (DWT->CYCCNT > startTick || DWT->CYCCNT < targetTick);
 
 }
 
