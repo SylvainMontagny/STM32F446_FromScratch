@@ -10,7 +10,6 @@ This project has been written for the STM32F446RE MCU. The main function works o
 	* Sytick Timer
 
 # 3. Project compilation
-## 3.1. How to use it with STM32CubeIDE?
 1. On STM32CubeIDE, create a new empty project: File > New > STM32 project > MCU Selector > STM32F446RET6 > Empty project.
 2. Delete all files from Inc/ and Src/ folder.
 3. Clone this repository on your Hard Disk.
@@ -26,9 +25,4 @@ For the compilation process:
 
 Your project is ready. You can now compile and flash your MCU.
 
-## 3.2. How to use it with arm-gcc
-TODO ... TODO
-
-## 3.3 How to use it with arm-gcc + Make
-TODO
  
